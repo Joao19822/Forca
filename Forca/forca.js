@@ -1,4 +1,12 @@
-var listaPalavras = ['xbox', 'playstation', 'controle', 'televisao', 'computador', 'league of legends'];    
+var listaPalavras = [
+    { palavra: 'xbox', dica: 'Console' },
+    { palavra: 'playstation', dica: 'Console' },
+    { palavra: 'controle', dica: 'Tem botões' },
+    { palavra: 'televisao', dica: 'Objeto usado para assistir' },
+    { palavra: 'computador', dica: 'Máquina usada para diversas ocasiões' },
+    { palavra: 'league of legends', dica: 'Jogo eletrônico popular' }
+];
+
 
 
 let palavraEscolhida;
@@ -8,27 +16,22 @@ let tentativasRestantes;
 let numeroErros;
 
 function iniciarJogo() {
-
     document.getElementById('botao-reiniciar').style.display = 'none';
     document.getElementById('entrada-letra').disabled = false;
 
-
-    palavraEscolhida = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
-    console.log(palavraEscolhida)
+    var escolha = listaPalavras[Math.floor(Math.random() * listaPalavras.length)];
+    palavraEscolhida = escolha.palavra;
+    var dica = escolha.dica;
     
-
     exibicaoPalavra = Array(palavraEscolhida.length).fill('_');
-    console.log(exibicaoPalavra);
-
     letraChutadas = [];
-
     tentativasRestantes = 7;
-
     numeroErros = 0;
 
+    document.getElementById('dica').innerText = `Dica: ${dica}`;
     atualizarExibicao();
-
 }
+
 
 
 function atualizarExibicao(){

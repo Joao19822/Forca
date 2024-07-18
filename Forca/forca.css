@@ -34,3 +34,8 @@ body{
 #botao-reiniciar:hover {
     background-color: rgb(76, 160, 76);
 }
+
+#dica {
+    font-size: 1.5em;
+    color: blue;
+}
