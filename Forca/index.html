@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Forca</title>
+    <link rel="stylesheet" href="forca.css">
+</head>
+<body>
+    <h1>Jogo Da forca</h1>
+    <img id="imagem" src="img/forca0.png"><img>
+    <div id="exibicao-palavra"></div>
+    <input type="text" id="entrada-letra" placeholder="Tente Colocar uma letra" maxlength="1">
+    <button id="btn-tentativa" onclick="tentarAcertar()">Tentativa</button>
+
+
+    <h2>Tentativas Usadas</h2>
+    <div id="letras-usadas"></div>
+    <div id="mensagem">Parabens Você ganhou🥳</div>
+        <button id="botao-reiniciar"  onclick="iniciarJogo()">Novo Jogo</button>
+</body>
+<script src="forca.js"></script>
+</html>
